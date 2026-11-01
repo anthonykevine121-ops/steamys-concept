@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --navy: #071746; --lime: #83d51b; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #101b3d; background: #fff; font-family: Arial, Helvetica, sans-serif; }
+::selection { background: #83d51b; color: #071746; }
+.container-width { width: min(1180px, calc(100% - 44px)); margin-inline: auto; }
+.section-pad { padding: 88px 0; }
+.eyebrow { color: #5cae0a; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.section-title { color: var(--navy); font-size: clamp(30px, 4vw, 45px); line-height: 1.08; font-weight: 900; letter-spacing: -.045em; }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; border-radius: 999px; background: var(--lime); color: var(--navy); padding: 13px 20px; font-size: 11px; font-weight: 900; letter-spacing: .03em; transition: .2s ease; }
+.btn-primary:hover { background: #a0ed40; transform: translateY(-2px); }
+.btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid #c5e6a2; color: var(--navy); border-radius: 999px; padding: 12px 18px; font-size: 10px; font-weight: 900; }
+.field { width: 100%; border: 1px solid #e3e8ee; border-radius: 8px; padding: 12px 13px; color: #17213e; outline: none; background: #f8fafc; font-size: 12px; }
+.field:focus { border-color: #83d51b; box-shadow: 0 0 0 3px rgba(131,213,27,.14); }
+.wave-top { clip-path: polygon(0 0,100% 0,100% 86%,94% 92%,87% 88%,80% 96%,72% 90%,64% 97%,55% 91%,47% 96%,39% 88%,31% 95%,22% 90%,13% 97%,6% 91%,0 96%); }
+@keyframes testimonial-fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.testimonial-fade-up { animation: testimonial-fade-up .4s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .testimonial-fade-up { animation: none; } }
+@media (max-width: 640px) { .container-width { width: min(100% - 30px, 1180px); } .section-pad { padding: 64px 0; } }
